@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LAst part</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function add_lang(name){
+        const ele = document.createElement('li');
+        ele.innerHTML = `${name}`
+        document.querySelector('.language').appendChild(ele)
+    }
+    add_lang("C++")
+    add_lang('Golang')
+    function add_opt_lang(name){
+        const ele = document.createElement('li')
+        ele.appendChild(document.createTextNode(name))
+        document.querySelector('.language').appendChild(ele)
+}
+add_opt_lang('JAva')
+
+const edit_lang = document.querySelector('li:nth-child(3)')
+edit_lang.innerHTML = 'rust'
+// const newli = document.createElement('li')
+// newli.textContent = 'go'
+// edit_lang.replaceWith(newli)
+
+const third_lang = document.querySelector('li:nth-child(3)')
+third_lang.remove()
+
+</script>
+</html>
